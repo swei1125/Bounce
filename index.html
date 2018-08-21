@@ -2,30 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src="lib/bundle.js"></script>
     <title>Bounce</title>
     <style>
     	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+    	canvas { background: #000; display: block; margin: 0 auto; }
     </style>
   </head>
   <body>
-    <canvas id="myCanvas" width="480" height="320"></canvas>
+    <canvas id="myCanvas" width="500" height="650"></canvas>
 
-    <script type="text/javascript">
-      let c = document.getElementById("myCanvas");
-      let ctx = c.getContext('2d');
-
-      
-      ctx.beginPath();
-      ctx.translate(50, 50)
-      ctx.rotate(Math.PI/4)
-      ctx.rect(50, 50, 45, 7);
-      ctx.strokeStyle = "blue";
-      ctx.stroke();
-      ctx.closePath();
-
-
-
-    </script>
   </body>
 </html>

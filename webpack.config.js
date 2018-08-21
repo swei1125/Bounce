@@ -4,25 +4,11 @@ module.exports = {
   context: __dirname,
   entry: './lib/entry.js',
   output: {
-    path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
+    path: path.resolve(__dirname, 'lib'),
     filename: 'bundle.js'
   },
   resolve: {
     extensions: ['.js', '.jsx', '*']
-  },
-  module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          query: {
-            presets: ['env', 'react']
-          }
-        },
-      }
-    ]
   },
   devtool: 'source-map'
 };
