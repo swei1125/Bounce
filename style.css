@@ -1,3 +1,78 @@
+* { padding: 0; margin: 0; }
+
+.main {
+  min-width: 1000px;
+  height: auto;
+}
+.outer-wrapper {
+  display: flex;
+  margin: 50px auto 0;
+  width: 1000px;
+}
 canvas {
-  border-radius: 4px;
+  background: #ee9ca7;
+  display: block;
+}
+.canvas-wrapper {
+  /* margin: 0 auto; */
+  width: 500px;
+  height: 650px;
+  border-radius: 5px;
+  border: 3px solid #16BFFD;
+  margin-right: 25px;
+}
+
+.content-wrapper {
+  font-family: 'Dosis', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  color: #16BFFD;
+  text-shadow: 2px 2px #ff0000;
+}
+
+.instruction {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.instruction h2{
+  font-weight: 400;
+  margin: 10px auto;
+  font-size: 30px;
+}
+.instruction ul {
+  margin-left: 25px;
+  font-size: 20px;
+}
+.instruction ul li {
+  line-height: 30px;
+}
+.instruction ul li img{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 2px;
+}
+.paddles {
+  margin-left: 15px;
+}
+.logos {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  /* margin-right: 25px; */
+}
+
+i {
+  margin-right: 10px;
 }

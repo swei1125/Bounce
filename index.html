@@ -4,14 +4,57 @@
     <meta charset="utf-8">
     <script type="text/javascript" src="lib/bundle.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <title>Bounce</title>
-    <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #000; display: block; margin: 0 auto; }
-    </style>
   </head>
   <body>
-    <canvas id="myCanvas" width="500" height="650"></canvas>
+    <div class="main">
+      <div class="outer-wrapper">
+
+        <div class="canvas-wrapper">
+          <canvas id="myCanvas" width="500" height="650"></canvas>
+        </div>
+        <div class="content-wrapper">
+          <h1>Welcom to Bounce!</h1>
+          <div class="instruction">
+            <h2>How to play:</h2>
+            <ul>
+              <li>Click anywhere on the game board to start the game</li>
+              <li>Click on paddles to rotate them</li>
+              <li>Press space to release the ball</li>
+              <li>
+                <img src='./start.png' />
+                <span>is the start position of the ball</span>
+              </li>
+              <li>
+                <img src="./destination.png">
+                <span>is where the ball should go at the end</span>
+              </li>
+              <li>Paddles:
+                <ul class='paddles'>
+                  <li> <strong class='blue'>Blue</strong>  paddle is regular paddle</li>
+                  <li> <strong class='red'>Red</strong>  paddle will disappear when the ball hits it</li>
+                </ul>
+              </li>
+              <li>Click <strong>Next</strong>  to the next level</li>
+              <li>Game over when the ball flies out of the board</li>
+              <li>Click <strong>Tryagain</strong>  to retry the same level</li>
+            </ul>
+          </div>
+          <div class="logos">
+            <a href="#">
+              <i class="fab fa-github"></i>
+              Github
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+              Linkedin
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
