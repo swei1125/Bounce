@@ -17,7 +17,9 @@ In Bounce, a player will be able to:
 
 This app will consist of a single screen. The play board will be displayed on the left side, and the instruction for the game will be displayed on the right side.
 
-![](layout.png)
+![](src/layout.png)
+
+![output](src/output.png)
 
 ### Architecture and Technologies
 * Vanilla JavaScript for overall structure and game logic.

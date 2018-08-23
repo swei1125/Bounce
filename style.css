@@ -8,17 +8,19 @@
   display: flex;
   margin: 50px auto 0;
   width: 1000px;
+  font-family: 'Wendy One', sans-serif;
+
 }
 canvas {
-  background: #ee9ca7;
+  background-image: linear-gradient(#C4E0E5, #4CA1AF);
   display: block;
+
 }
 .canvas-wrapper {
-  /* margin: 0 auto; */
   width: 500px;
   height: 650px;
   border-radius: 5px;
-  border: 3px solid #16BFFD;
+  border: 3px solid #6C5B7B;
   margin-right: 25px;
 }
 
@@ -27,9 +29,9 @@ canvas {
 }
 
 h1 {
-  font-size: 60px;
-  color: #16BFFD;
-  text-shadow: 2px 2px #ff0000;
+  font-size: 55px;
+  color: #3db0c3 ;
+  text-shadow: 2px 2px #FF5F6D;
 }
 
 .instruction {
@@ -48,6 +50,12 @@ h1 {
 }
 .instruction ul li {
   line-height: 30px;
+}
+.blue {
+  color: #1897c7;
+}
+.red {
+  color: #ec4a52;
 }
 .instruction ul li img{
   width: 20px;
@@ -70,9 +78,14 @@ a {
   color: black;
   display: flex;
   align-items: center;
-  /* margin-right: 25px; */
+}
+a:hover {
+  -webkit-text-stroke: 1.5px #1897c7;
+  color: white;
+  /* text-shadow: 2px 2px black; */
 }
 
 i {
   margin-right: 10px;
+  position: relative;
 }
