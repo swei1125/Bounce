@@ -19,7 +19,7 @@ This app will consist of a single screen. The play board will be displayed on th
 
 ![](src/layout.png)
 
-![output](src/output.png)
+![](src/output.png)
 
 ### Architecture and Technologies
 * Vanilla JavaScript for overall structure and game logic.
