@@ -10,8 +10,63 @@ The difference between these two pads:
 In Bounce, a player will be able to:
 * See instructions for the game.
 * Rotate the paddle by clicking on it.
-* Release the ball by clicking the start icon.
-* Select different levels of the game.
+* Release the ball by pressing the space key.
+* Hear the sound effect when the ball hits paddles, gets to destination, and goes out of the board
+* Replay the same level if the ball flies out of the board.
+* Go to next level if player passes the current level.
+
+#### Highlight Code
+To ensure the smoothness of the game, I clear the `setInterval` whenever the ball either flies out of the board or gets to the destination:
+``` JavaScript
+// lib/game.js
+play() {
+  const interval = setInterval(() => {
+    this.board.draw.bind(this.board)();
+    if (this.board.won) { //when the ball gets to destination
+      clearInterval(interval);
+      if (this.levelNum === Levels.length - 1) {
+        this.endQuote.bind(this)();//if it is the last level, render the ending note
+      }else {
+        this.next = false;
+        this.goNext.bind(this)();//render the next button for player to play next level
+      }
+    }
+    if (this.board.over) {   //when the ball flies out
+      this.retry = false;
+      clearInterval(interval);
+      this.finish.bind(this)();//render retry button for player to play again
+    }
+  }, 13);
+}
+```
+
+Every time a player click on `tryagain`, the board will re-render the same level and remove all changes that player makes on paddles. I accomplish this by adding the `mousedown` event listener and creating a new board on the canvas. In addition, I also add a `mouseup` event listener to remove the previous `mousedown` event listener, which can prevent re-rendering the board:
+``` JavaScript
+// lib/game.js
+const tryagain = (e) => {
+  let x = e.x - this.canvas.offsetLeft;//getting cursor's position
+  let y = e.y - this.canvas.offsetTop;
+  //check if the cursor position is within the tryagin rectangle
+  if (x >= 140 && x <= 360 && y >= 312 && y <= 372) {
+    this.retry = true;
+    this.ctx.clearRect(0,0, this.canvas.width, this.canvas.height);//clear the canvas
+    this.ctx.beginPath();
+    this.board = new Board(this.ctx, this.canvas, this.level);
+    this.init();//re-render the board
+  }
+};
+const removeMousedown = (e) => {
+  let x = e.x - this.canvas.offsetLeft;
+  let y = e.y - this.canvas.offsetTop;
+  if (x >= 163 && x <= 323 && y >= 312 && y <= 372) {
+    this.canvas.removeEventListener("mousedown", tryagain);
+  }
+};
+
+this.canvas.addEventListener("mousedown", tryagain);
+this.canvas.addEventListener("mouseup", removeMousedown);
+
+```
 
 ### Wireframes
 
