@@ -34,6 +34,19 @@ h1 {
   text-shadow: 2px 2px #FF5F6D;
 }
 
+#tryagain {
+  width: 90px;
+  height: 30px;
+  position: relative;
+  top: 8px;
+}
+
+#next {
+  width: 70px;
+  height: 35px;
+  position: relative;
+  top: 10px;
+}
 .instruction {
   width: 90%;
   margin: 10px auto;
@@ -58,7 +71,7 @@ h1 {
 .red {
   color: #ec4a52;
 }
-.instruction ul li img{
+.instruction ul li .start, .instruction ul li .destination{
   width: 20px;
   height: 20px;
   position: relative;
@@ -89,18 +102,4 @@ a:hover {
 i {
   margin-right: 10px;
   position: relative;
-}
-
-#tryagain {
-  width: 90px;
-  height: 30px;
-  position: relative;
-  top: 8px;
-}
-
-#next {
-  width: 70px;
-  height: 35px;
-  position: relative;
-  top: 10px;
 }
