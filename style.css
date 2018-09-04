@@ -50,6 +50,7 @@ h1 {
 }
 .instruction ul li {
   line-height: 30px;
+
 }
 .blue {
   color: #1897c7;
@@ -88,4 +89,18 @@ a:hover {
 i {
   margin-right: 10px;
   position: relative;
+}
+
+#tryagain {
+  width: 90px;
+  height: 30px;
+  position: relative;
+  top: 8px;
+}
+
+#next {
+  width: 70px;
+  height: 35px;
+  position: relative;
+  top: 10px;
 }
