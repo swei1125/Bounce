@@ -1,4 +1,5 @@
 # Bounce
+[Bounce Live](https://swei1125.github.io/Bounce/)
 ### Background and Overview
 Bounce is a puzzle game inspired by a mobile game, logi. In the game, a player needs to send a ball through paddles by rearranging those paddles. There are two different paddles that can deflect the ball, blue and red. Your task is to rearrange the paddles so that the ball can fly to its destination.
 
